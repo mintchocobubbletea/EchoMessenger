@@ -33,6 +33,8 @@
             myTextBox = new TextBox();
             label1 = new Label();
             txtCount = new Label();
+            btnDelete = new Button();
+            Deletebtn = new Button();
             SuspendLayout();
             // 
             // ListBox
@@ -41,15 +43,15 @@
             ListBox.FormattingEnabled = true;
             ListBox.Location = new Point(70, 107);
             ListBox.Name = "ListBox";
-            ListBox.Size = new Size(630, 228);
+            ListBox.Size = new Size(726, 228);
             ListBox.TabIndex = 0;
             // 
             // SendButton
             // 
-            SendButton.Font = new Font("맑은 고딕", 15F);
-            SendButton.Location = new Point(600, 368);
+            SendButton.Font = new Font("맑은 고딕", 10F);
+            SendButton.Location = new Point(588, 368);
             SendButton.Name = "SendButton";
-            SendButton.Size = new Size(100, 42);
+            SendButton.Size = new Size(66, 38);
             SendButton.TabIndex = 1;
             SendButton.Text = "전송";
             SendButton.UseVisualStyleBackColor = true;
@@ -80,15 +82,40 @@
             txtCount.AutoSize = true;
             txtCount.Location = new Point(70, 338);
             txtCount.Name = "txtCount";
-            txtCount.Size = new Size(0, 15);
+            txtCount.Size = new Size(85, 15);
             txtCount.TabIndex = 4;
+            txtCount.Text = "현재 대화: 0개";
+            // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("맑은 고딕", 9F);
+            btnDelete.Location = new Point(732, 368);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(80, 38);
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "전체 대화 삭제";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // Deletebtn
+            // 
+            Deletebtn.Font = new Font("맑은 고딕", 10F);
+            Deletebtn.Location = new Point(660, 368);
+            Deletebtn.Name = "Deletebtn";
+            Deletebtn.Size = new Size(66, 38);
+            Deletebtn.TabIndex = 6;
+            Deletebtn.Text = "삭제";
+            Deletebtn.UseVisualStyleBackColor = true;
+            Deletebtn.Click += Deletebtn_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(881, 450);
+            Controls.Add(Deletebtn);
+            Controls.Add(btnDelete);
             Controls.Add(txtCount);
             Controls.Add(label1);
             Controls.Add(myTextBox);
@@ -107,5 +134,7 @@
         private TextBox myTextBox;
         private Label label1;
         private Label txtCount;
+        private Button btnDelete;
+        private Button Deletebtn;
     }
 }

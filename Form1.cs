@@ -14,6 +14,7 @@ namespace EchoMessenger
             //공백 입력 방지
             if (string.IsNullOrWhiteSpace(myTextBox.Text))
             {
+                MessageBox.Show("메시지를 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             // ListBox에 메시지 추가

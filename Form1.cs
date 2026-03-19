@@ -29,7 +29,7 @@ namespace EchoMessenger
             }
 
             //타임 스탬프
-            string timeStamp = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {msg}";
+            string timeStamp = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss}";
 
             // 메시지 결합
             string finalMessage = "[" + timeStamp + "] " + msg;

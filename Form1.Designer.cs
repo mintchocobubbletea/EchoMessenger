@@ -28,37 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            ListBox = new ListBox();
+            SendButton = new Button();
+            myTextBox = new TextBox();
             label1 = new Label();
             SuspendLayout();
             // 
-            // listBox1
+            // ListBox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(70, 107);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(630, 229);
-            listBox1.TabIndex = 0;
+            ListBox.Font = new Font("맑은 고딕", 15F);
+            ListBox.FormattingEnabled = true;
+            ListBox.Location = new Point(70, 107);
+            ListBox.Name = "ListBox";
+            ListBox.Size = new Size(630, 228);
+            ListBox.TabIndex = 0;
             // 
-            // button1
+            // SendButton
             // 
-            button1.Font = new Font("맑은 고딕", 15F);
-            button1.Location = new Point(600, 368);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 42);
-            button1.TabIndex = 1;
-            button1.Text = "전송";
-            button1.UseVisualStyleBackColor = true;
+            SendButton.Font = new Font("맑은 고딕", 15F);
+            SendButton.Location = new Point(600, 368);
+            SendButton.Name = "SendButton";
+            SendButton.Size = new Size(100, 42);
+            SendButton.TabIndex = 1;
+            SendButton.Text = "전송";
+            SendButton.UseVisualStyleBackColor = true;
+            SendButton.Click += SendButton_Click;
             // 
-            // textBox1
+            // myTextBox
             // 
-            textBox1.Font = new Font("맑은 고딕", 13F);
-            textBox1.Location = new Point(70, 376);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(506, 31);
-            textBox1.TabIndex = 2;
+            myTextBox.Font = new Font("맑은 고딕", 15F);
+            myTextBox.Location = new Point(70, 372);
+            myTextBox.Name = "myTextBox";
+            myTextBox.Size = new Size(506, 34);
+            myTextBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -78,9 +80,9 @@
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(listBox1);
+            Controls.Add(myTextBox);
+            Controls.Add(SendButton);
+            Controls.Add(ListBox);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -89,9 +91,9 @@
 
         #endregion
 
-        private ListBox listBox1;
-        private Button button1;
-        private TextBox textBox1;
+        private ListBox ListBox;
+        private Button SendButton;
+        private TextBox myTextBox;
         private Label label1;
     }
 }

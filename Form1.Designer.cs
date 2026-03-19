@@ -32,6 +32,7 @@
             SendButton = new Button();
             myTextBox = new TextBox();
             label1 = new Label();
+            txtCount = new Label();
             SuspendLayout();
             // 
             // ListBox
@@ -74,12 +75,21 @@
             label1.TabIndex = 3;
             label1.Text = "Echo Messenger";
             // 
+            // txtCount
+            // 
+            txtCount.AutoSize = true;
+            txtCount.Location = new Point(70, 338);
+            txtCount.Name = "txtCount";
+            txtCount.Size = new Size(0, 15);
+            txtCount.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtCount);
             Controls.Add(label1);
             Controls.Add(myTextBox);
             Controls.Add(SendButton);
@@ -96,5 +106,6 @@
         private Button SendButton;
         private TextBox myTextBox;
         private Label label1;
+        private Label txtCount;
     }
 }

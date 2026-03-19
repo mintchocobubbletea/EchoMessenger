@@ -11,14 +11,27 @@ namespace EchoMessenger
 
         private void SendButton_Click(object sender, EventArgs e) //전송 버튼
         {
+            //문자열 공백 제거
+            string msg = myTextBox.Text.Trim();
+
             //공백 입력 방지
             if (string.IsNullOrWhiteSpace(myTextBox.Text))
             {
                 MessageBox.Show("메시지를 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            //타임 스탬프
+            string timeStamp = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {msg}";
+
+            // 메시지 결합
+            string finalMessage = "[" + timeStamp + "] " + msg;
+
             // ListBox에 메시지 추가
-            ListBox.Items.Add(myTextBox.Text);
+            ListBox.Items.Add(finalMessage);
+
+            // 메시지 개수 업데이트
+            txtCount.Text = "현재 대화: " + ListBox.Items.Count + "개";
 
             // 입력창 비우기
             myTextBox.Clear();

@@ -61,6 +61,7 @@
             myTextBox.Name = "myTextBox";
             myTextBox.Size = new Size(506, 34);
             myTextBox.TabIndex = 2;
+            myTextBox.KeyDown += myTextBox_KeyDown;
             // 
             // label1
             // 
